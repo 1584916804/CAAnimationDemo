@@ -1,55 +1,54 @@
 //
-//  ViewController.m
+//  BasicAnimationVC.m
 //  CAAnimationDemo
 //
-//  Created by mini on 2019/3/19.
+//  Created by mini on 2019/3/22.
 //  Copyright © 2019年 mini. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "BasicAnimationVC.h"
 
-@interface ViewController ()<CAAnimationDelegate>
+@interface BasicAnimationVC ()<CAAnimationDelegate>
 
 @property (nonatomic, strong) UILabel *label;
 
 @end
 
-@implementation ViewController
+@implementation BasicAnimationVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
+    // Do any additional setup after loading the view.
     [self customContent];
     
     
     //1.基础动画( CABasicAnimation )
     //1.1 位移动画
-//    [self positionAnimation];
+    //    [self positionAnimation];
     //1.2 旋转动画
-//    [self rotateAnimation];
+    //    [self rotateAnimation];
     //1.3 缩放动画
-//    [self scaleAnimation];
+    //    [self scaleAnimation];
     //1.4 透明度动画
-//    [self opacityAnimation];
+    //    [self opacityAnimation];
     //1.5 背景色动画(背景色 没用???)
-//    [self backgroundColorAnimation];
+    //    [self backgroundColorAnimation];
     
     //2.0 关键帧动画 CAKeyframeAnimation
     //2.1 关键帧动画
-//    [self keyFrameAnimation];
+    //    [self keyFrameAnimation];
     
     //2.2 路径动画
-//    [self pathAnimation];
+    //    [self pathAnimation];
     //2.3 抖动动画
-//    [self shakeAnimation];
+    //    [self shakeAnimation];
     
     //3  组动画( CAAnimationGroup )
     //3.1 同时动画
-//    [self groupAnimation];
+    //    [self groupAnimation];
     
     //3.2 连续动画
-//    [self goOnAnimation];
+    //    [self goOnAnimation];
     
     
     //4. 过渡动画(转场动画)( CATransition )
@@ -63,7 +62,7 @@
      注:  因 Apple 不提供维护，并且有可能造成你的app审核不通过, 所以不建议开发者们使用这些私有API.
      */
     [self transition];
-   
+    
 }
 
 - (void)customContent{
@@ -101,9 +100,9 @@
     CABasicAnimation *baseAni = [CABasicAnimation animationWithKeyPath:@"transform.rotation.x"];
     baseAni.toValue = @(180);
     baseAni.duration = 30;
-//    baseAni.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-//    baseAni.repeatCount = 10;
-//    baseAni.repeatDuration = 2000;
+    //    baseAni.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    //    baseAni.repeatCount = 10;
+    //    baseAni.repeatDuration = 2000;
     baseAni.removedOnCompletion = NO;
     baseAni.fillMode = kCAFillModeForwards;
     [self.label.layer addAnimation:baseAni forKey:@"rotateAnimation"];
@@ -145,11 +144,11 @@
     baseAni.duration = 5.0;
     baseAni.beginTime = CACurrentMediaTime();
     //    baseAni.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-//    baseAni.repeatCount = HUGE_VALF;
-//        baseAni.repeatDuration = 2000;
+    //    baseAni.repeatCount = HUGE_VALF;
+    //        baseAni.repeatDuration = 2000;
     baseAni.fillMode = kCAFillModeForwards;//只在前台
     baseAni.removedOnCompletion = NO;//切出界面再回来动画不会停止
-//    self.label.layer.anchorPoint = CGPointMake(0, 1);
+    //    self.label.layer.anchorPoint = CGPointMake(0, 1);
     [self.label.layer addAnimation:baseAni forKey:@"backgroundColorAnimation"];
 }
 //2.1 关键帧动画
@@ -242,7 +241,7 @@
     
     CABasicAnimation *ani3 = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     
-//    ani3.fromValue = @(CGPointMake(0, 0));
+    //    ani3.fromValue = @(CGPointMake(0, 0));
     ani3.toValue = @(M_PI * 4);
     ani3.duration = 1.0;
     ani3.fillMode = kCAFillModeForwards;
@@ -260,17 +259,18 @@
     caTransition.timingFunction = [CAMediaTimingFunction functionWithName:@"easeInEaseOut"];//切换时间函数
     
     
-//    caTransition.type = kCATransitionReveal;//动画切换风格
+    //    caTransition.type = kCATransitionReveal;//动画切换风格
     caTransition.type = kCATransitionFade;//动画切换风格
-//    caTransition.type = kCATransitionMoveIn;//动画切换风格
-//    caTransition.type = kCATransitionPush;//动画切换风格
+    //    caTransition.type = kCATransitionMoveIn;//动画切换风格
+    //    caTransition.type = kCATransitionPush;//动画切换风格
     
-//    caTransition.subtype = kCATransitionFromLeft;//动画切换方向
-//    caTransition.subtype = kCATransitionFromRight;//动画切换方向
+    //    caTransition.subtype = kCATransitionFromLeft;//动画切换方向
+    //    caTransition.subtype = kCATransitionFromRight;//动画切换方向
     caTransition.subtype = kCATransitionFromTop;//动画切换方向
-//    caTransition.subtype = kCATransitionFromBottom;//动画切换方向
+    //    caTransition.subtype = kCATransitionFromBottom;//动画切换方向
     
     [self.label.layer addAnimation:caTransition forKey:@"Key"];
 }
+
 
 @end

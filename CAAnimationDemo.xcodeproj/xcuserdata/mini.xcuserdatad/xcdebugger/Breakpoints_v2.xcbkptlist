@@ -2,4 +2,85 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CAAnimationDemo/BubbleAnimationVC/BubbleImageView.m"
+            timestampString = "574944383.642339"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "-animationDidStop:finished:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CAAnimationDemo/BubbleAnimationVC/BubbleImageView.m"
+            timestampString = "574944394.460073"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "-animationDidStop:finished:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__45-[BubbleImageView animationDidStop:finished:]_block_invoke"
+                  moduleName = "CAAnimationDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mini/Desktop/iOS%20%E5%B7%A5%E4%BD%9C%E6%95%B4%E7%90%86/CAAnimationDemo/CAAnimationDemo/BubbleAnimationVC/BubbleImageView.m"
+                  timestampString = "574944394.4661061"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__45-[BubbleImageView animationDidStop:finished:]_block_invoke_2"
+                  moduleName = "CAAnimationDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mini/Desktop/iOS%20%E5%B7%A5%E4%BD%9C%E6%95%B4%E7%90%86/CAAnimationDemo/CAAnimationDemo/BubbleAnimationVC/BubbleImageView.m"
+                  timestampString = "574944394.46896"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_"
+                  moduleName = "CAAnimationDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mini/Desktop/iOS%20%E5%B7%A5%E4%BD%9C%E6%95%B4%E7%90%86/CAAnimationDemo/CAAnimationDemo/BubbleAnimationVC/BubbleImageView.m"
+                  timestampString = "574944394.471983"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
