@@ -37,6 +37,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
+    //20190416002
+    
     self.sectionArray = [[NSMutableArray alloc] initWithObjects:@"基本动画", @"泡泡", @"卡牌", nil];
     
     
