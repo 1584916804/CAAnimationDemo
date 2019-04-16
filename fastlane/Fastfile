@@ -1,0 +1,35 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "fastlane打包测试"
+  lane :custom_lane do
+    # add actions here: https://docs.fastlane.tools/actions
+gym(
+clean: true, #打包前clean项目
+    export_method: "ad-hoc", #这里填写导出方式 
+    #Xcode 9 默认不允许访问钥匙串的内容,必须要设置此项才可以
+    export_xcargs: "-allowProvisioningUpdates", 
+    scheme: "CAAnimationDemo", # 此处应该是TargetDemo2 
+    configuration: "Debug", #环境
+    output_directory:"./app", #ipa的存放目录
+    output_name:get_build_number() #输出ipa的文件名为当前的build号
+
+)
+
+  end
+end
